@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Area of triangle = <p id="area"></p>
+        Celsius to Fahrenheit = <p id="cf"></p>
+        Fahrenheit to Celsius = <p id="fc"></p>
+    </div>
+    <script>
+        document.getElementById("area").innerHTML = window.area_of_triangle(5,6,7);
+        document.getElementById("cf").innerHTML = window.c_f(60);
+        document.getElementById("fc").innerHTML = window.f_c(45);        
+    </script>
+</body>
+</html>
