@@ -19,3 +19,61 @@ function max(a,b,c){
 function factor(num){
     return (num%3==0)?true : (num%7==0?true:false);
 }
+
+//function capitalize(str){
+//    var i=0;
+//    var arr = str.split(" ");
+//    arr = str.split("");
+    
+    //arr[0] = arr[0].charAt(0).toUpperCase();
+    /*var i, len = str.length();
+    for(i=0; i<len; ++i){
+        arr[i] = arr[i].split("");
+        if(arr[i][0]>= "a" && arr[i][0]<="z"){
+            arr[i][0] = arr[i][0] + ("a" - "A");
+        }
+    }  */
+//    
+//    return arr;
+//}
+//console.log(capitalize("vibha sharma"))
+
+
+                            //Pset 4
+//Ques 1
+function contains(arr){
+    var len = arr.length;
+    var flag30 = 0, flag40 = 0;
+
+    for(; len!=0; --len){
+        if(arr[len-1]==30){
+            ++flag30;
+            if(flag40!=0)
+                return true;
+        }
+        else if(arr[len-1]==40){
+            ++flag40;
+            if(flag30!=0)
+                return true;
+        }
+    }
+    if(flag30==0 || flag40==0)
+        return false;
+}
+
+console.log(contains([10,20,30,50,60,40]))
+console.log(contains([10,20,30,60]));
+
+//Ques 2
+function fnlswap(arr){
+    var len = arr.length;
+    if(len >= 1){
+        arr[0] = arr[0] + arr[len-1];
+        arr[len-1] = arr[0] - arr[len-1];
+        arr[0] = arr[0] - arr[len-1];
+    }
+    return arr;
+}
+
+console.log(fnlswap([1,2,3,4,5,6,7,8]));
+
