@@ -77,3 +77,29 @@ function fnlswap(arr){
 
 console.log(fnlswap([1,2,3,4,5,6,7,8]));
 
+//Ques 3
+function high_and_low(arr){
+    var len = arr.length;
+    var max = arr[len-1];
+    var min = arr[len-1];
+    --len;
+    for(; len!=0; --len){
+        if(arr[len-1] > max){
+            max = arr[len-1];
+        }
+        if(arr[len-1] < min){
+            min = arr[len-1];
+        }
+    }
+    return "Max = " + max + " Min = " + min;
+}
+
+console.log(high_and_low([1,0,60,9,4,7,4,8]))
+
+//Ques 4
+var total = 0;
+function sumOf(value){
+    total += value;
+}
+[1,2,3,4,5,6,7,8,9,10].forEach(sumOf);
+console.log(total);
