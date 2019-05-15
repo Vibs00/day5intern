@@ -1,0 +1,34 @@
+Storing or pushing objects in an array?
+    - We can't push any variable in an array if it is not already defined.
+      The same goes with objects, if an object is not defined prior to push
+      then error is encountered.
+
+Splice method required fields?
+    -  splice(index, how_many, value1, value2...)
+        index ->required
+        how_many ->not required
+        value1, value2,... ->not required
+
+for-in loop?
+    -  loops over all the properties of object
+            for(var property1 in object){
+                return property1;
+            }
+            eg: var object = {num:123, name:"vibha"};
+                for(var property1 in object){
+                    return property1;
+                }
+                o/p ->
+                    "123"
+                    "vibha"
+
+        reference -> https://codeburst.io/foreach-vs-for-of-vs-for-in-tug-of-for-d8f935396648
+
+forEach loop?
+    -  always has function in it's argument.
+        arr.forEach(function(value, index){
+            //tasks
+        });
+
+Arrays are object too. Since typeof array is returned as object. But don't use computations 
+of objects on Arrays. To know more refer https://www.w3schools.com/js/js_arrays.asp
