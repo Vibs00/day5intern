@@ -20,23 +20,25 @@ function factor(num){
     return (num%3==0)?true : (num%7==0?true:false);
 }
 
-//function capitalize(str){
-//    var i=0;
-//    var arr = str.split(" ");
-//    arr = str.split("");
+console.log("capitalize prog");
+function capitalize(str){
+   var i=0;
+   var arr = str.split(" ");
+   //arr = str.split("");
     
     //arr[0] = arr[0].charAt(0).toUpperCase();
-    /*var i, len = str.length();
-    for(i=0; i<len; ++i){
-        arr[i] = arr[i].split("");
-        if(arr[i][0]>= "a" && arr[i][0]<="z"){
-            arr[i][0] = arr[i][0] + ("a" - "A");
+    var len = str.length;
+    for(; len!=0; --len){
+        arr[len-1] = arr[len-1].split("");
+        if(arr[len-1][0]>= "a" && arr[len-1][0]<="z"){
+            //arr[i][0] = arr[i][0] + ("a" - "A");
+            arr[len-1][0].toUpperCase();
         }
-    }  */
-//    
-//    return arr;
-//}
-//console.log(capitalize("vibha sharma"))
+    } 
+   
+   return arr;
+}
+console.log(capitalize("vibha sharma"))
 
 
                             //Pset 4
